@@ -1,2 +1,2 @@
 #!/bin/bash
-$PATH | try ":" "\n" l wc -l
+echo $PATH | try ":" "\n" | wc -l
