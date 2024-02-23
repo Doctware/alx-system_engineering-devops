@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 # This sript dsplays the current running processes
-
-# Header name
 echo "USER 	      PID %CPU %MEM    VSZ  RSS TTY     STAT    START  TIME    COMMAND"
-
 ps -e -o user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command, --forest --no-header
