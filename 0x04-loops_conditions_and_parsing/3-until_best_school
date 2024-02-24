@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Using until loop
+str="Best School"
+i=0
+until [ $i == 10 ]; do
+	echo "$str"
+	i=$((i+1))
+done
