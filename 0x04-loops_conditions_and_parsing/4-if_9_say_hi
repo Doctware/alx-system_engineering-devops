@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# print Hi if 9
 str0="Best School"
 str1="Hi"
 i=1
