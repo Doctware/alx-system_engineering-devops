@@ -4,7 +4,7 @@ str0="Best School"
 str1="bad luck"
 str2="good luck"
 i=1
-while [ $i -le 10 ]; do
+while [ $i -lt 10 ]; do
 	if [ $i -eq 3 ]; then
 		echo "$str0"
 		echo "$str1"
