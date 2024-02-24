@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Print Best School x10
+str="Best School"
+for _ in {1..10}; do
+	echo "$str"
+done
