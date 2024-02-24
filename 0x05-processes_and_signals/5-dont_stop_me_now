@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Terminate 4-to_infinityand_beyond
+kill 26224 
