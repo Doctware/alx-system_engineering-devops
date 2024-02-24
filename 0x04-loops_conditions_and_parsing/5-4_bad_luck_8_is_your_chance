@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# loop from 1 to 10 base on the given condition
+str0="Best School"
+str1="bad luck"
+str2="good luck"
+i=1
+while [ $i -le 10 ]; do
+	if [ $i -eq 3 ]; then
+		echo "$str0"
+		echo "$str1"
+	elif [ $i -eq 7 ]; then
+		echo "$str2"
+	else
+		echo "$str0"
+	fi
+	((i++))
+done
