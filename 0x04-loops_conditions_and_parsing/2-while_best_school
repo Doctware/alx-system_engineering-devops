@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Print str times 10 using wile loop
+str="Best School"
+i=0
+while [ $i -lt 10 ]; do
+	echo "$str"
+	i=$((i+1))
+done
