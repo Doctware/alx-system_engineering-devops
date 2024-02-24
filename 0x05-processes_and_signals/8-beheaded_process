@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# kill task 7 process
+pkill -f -SIGKILL "./7-highlander"
