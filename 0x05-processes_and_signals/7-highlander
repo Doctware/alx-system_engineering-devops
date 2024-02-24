@@ -6,6 +6,6 @@ while :
 do
     echo "$str0"
     sleep 2
-    trap 'echo "I am invincible!!!"; exit' SIGTERM
+    trap 'echo "I am invincible!!!"' SIGTERM
 done
 
