@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# A bash script thats dispalys the PID along with the process name
+#of proceses whos name contains bash
+for pid_dir in /proc/*/; do
+	pid=$(basename "$pid_dir")
+	if [[ -f "$pid_dir/cmdline" && $(<"$pid_dir/cmdline" tr -d '\0') == *bash* ]]; then
+		process_name=$(tr '\0' ' ' < "$pid_dir/cmdline" | awk '{print $1}')
+		echo "$pid $process_name"
+	fi
+done
