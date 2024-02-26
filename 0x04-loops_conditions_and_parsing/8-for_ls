@@ -4,6 +4,6 @@
 for file in *; do
 	if [[ ! "$file" == .* && "$file" == *-* ]]; then
 		filename=$(echo "$file" | cut -d '-' -f 2-)
+		echo "$filename"
 	fi
-	echo "$filename"
 done
