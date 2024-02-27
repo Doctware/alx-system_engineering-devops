@@ -2,8 +2,5 @@
 #Display the content of C W D
 
 for file in *; do
-	if [[ ! "$file" == .* && "$file" == *-* ]]; then
-		filename="${file#*-}"
-		echo "$filename"
-	fi
+	echo "$file" | cut -d '-' -f 2-
 done
