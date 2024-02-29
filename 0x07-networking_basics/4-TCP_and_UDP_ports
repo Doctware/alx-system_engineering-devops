@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Displays listning port
+
+netstat -pl
