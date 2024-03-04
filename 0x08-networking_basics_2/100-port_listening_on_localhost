@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-#listen on port 8 on local host
-sudo nc -l 98 localhost

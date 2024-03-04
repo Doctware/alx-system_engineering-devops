@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# displays all attached IPs on the current machine 
-ifconfig | grep -Po 'inet \d{0,9}+.\d{0,9}+.\d{0,9}+.\d{0,9}+' | cut -d' '  -f2
