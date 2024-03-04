@@ -2,6 +2,6 @@
 # This script configures an Ubuntu server
 
 cp /etc/hosts ~/hosts.new
-sed -i '/^127.0.0.1/s/$/ 127.0.0.2/' ~/hosts.new
+sed -i '/^127.0.0.1/s@$@ 127.0.0.2@' ~/hosts.new
 echo "8.8.8.8 facebook.com" >> ~/hosts.new
-cp -f ~/hosts.new /etc/hosts
+sudo cp -f ~/hosts.new /etc/hosts
