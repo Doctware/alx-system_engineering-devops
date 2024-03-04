@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#show the attached ipv4 address
+
+ifconfig | grep -Po 'inet (addr:)?{[0-9]*\.}{3}[0-9]*' | cut -d ' ' -f 2
