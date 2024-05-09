@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script configures an Ubuntu server
+# This script configures an Ubuntu server :)
 
 cp /etc/hosts ~/hosts.new
 sed -i 's/127.0.0.1/127.0.0.2/g' ~/hosts.new
