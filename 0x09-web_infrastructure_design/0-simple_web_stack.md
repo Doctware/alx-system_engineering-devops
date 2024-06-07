@@ -1,9 +1,10 @@
 My simple web stack diagram -> https://imgur.com/xhtYKYS
 
+Discrption:
 in this simple web stack there is a server that host www.foobar.com
-and this server was able to connect to with the help of DNS that record 
+and this server was able to locate with the help of DNS that record 
 www.foobar.com pointing to 8.8.8.8 which is the address of the server that hosted
-www.foobar.com
+www.foobar.com the server netwrok does not secure with SSL or any firewall
 
 What is a server?
 	 in my own definition this is a computer, situated in somewere or anywhere and
