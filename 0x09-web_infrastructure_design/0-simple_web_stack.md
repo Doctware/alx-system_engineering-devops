@@ -36,7 +36,7 @@ what is the server is using to communicate with the computer of the user request
 Issues with this infastructure
 ==============================
 SPOF: there are multiple single point of failure in this simple web stack
-EX: The app server WebSphere if there is any issue with this component the entire site
+EX: The app server WebSphere, if there is any issue with this component the entire site
 will be inaccessible.
 
 Downtime: this will ocure most expectially when the Application file is being update.
