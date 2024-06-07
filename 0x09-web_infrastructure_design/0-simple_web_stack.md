@@ -30,4 +30,16 @@ What the role of the Database MySql?
 	This is used to store data such as users information, and for easy access at anytime needed
 
 what is the server is using to communicate with the computer of the user requesting the website?
-	the server is using HTTP to communicate with the user over TCP/IP conection
+	the server is using HTTP to communicate with the user over TCP/IP conection.
+
+
+Issues with this infastructure
+==============================
+SPOF: there are multiple single point of failure in this simple web stack
+EX: The app server WebSphere if there is any issue with this component the entire site
+will be inaccessible.
+
+Downtime: this will ocure most expectially when the Application file is being update.
+
+Too much of incommig trafic can slow dow the server as it can only perfom on
+it weighted traffic
