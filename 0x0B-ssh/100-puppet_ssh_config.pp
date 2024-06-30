@@ -1,3 +1,4 @@
+# set up clint cofig
 file { '/home/doctware/.ssh/config':
   ensure  => file,
   owner   => 'doctware',
