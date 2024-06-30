@@ -6,7 +6,7 @@ file { '/home/doctware/.ssh/config':
   content => @(EOF)
 Host 52.91.157.23
     User ubuntu
-    IdentityFile /home/doctware/.ssh/config
+    IdentityFile ~/.ssh/config
     PasswordAuthentication no
 | EOF
 }
