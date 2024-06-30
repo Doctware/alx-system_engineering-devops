@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
 # this script uses ssh to connect to a server using private key 
-
-SERVER="8.8.8.8"
-
-ssh -i ~/ssh/school ubuntu@SERVER
+ssh -i ~/ssh/school ubuntu@8.8.8.8
