@@ -2,13 +2,13 @@
 # installing NGIINX on my server
 
 # updating pacckages
-sudo apt-get update
+sudo apt-get -y update
 
 # installing nginx
 sudo apt-get install -y nginx
 
 # costom html file with hello wworld
-echo "Hello World!" > /var/www/html/index.enginx-debian.html
+echo 'Hello World' > /var/www/html/index.nginx-debian.html
 
 # Ensure nginx is not usinf systemd for restarting (using service cmd instead)
 sudo service nginx start
