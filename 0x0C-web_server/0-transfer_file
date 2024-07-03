@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# moving file to my server
+
+if [ "$#" -ne 4 ]; then 
+	echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+	exit 1
+fi
+
+PATH_TO_FILE=$1
+IP=$2
+USERNAME=$3
+PATH_TO_SSH_KEY=$4
+
+# executing the command
+
+scp -o StrictHostKeyChecking=no "$PATH_TO_FILE" "$IP" "$USERNAME" -i "$PATH_TO_SSH_KEY"
