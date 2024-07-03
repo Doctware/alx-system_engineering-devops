@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# installing NGIINX on my server
+
+# updating pacckages
+apt-get update
+
+# installing nginx
+apt-get install -y nginx
+
+# costom html file with hello wworld
+echo "Hello World!" > /var/www/html/index.html
+
+# Ensure nginx is not usinf systemd for restarting (using service cmd instead)
+service nginx start
+
+# restart to apply changes
+nginx -s reload
