@@ -5,7 +5,7 @@
 sudo apt-get -y update
 
 # installing nginx
-sudo apt-get install -y nginx
+sudo apt-get -y install nginx
 
 # costom html file with hello wworld
 echo 'Hello Worldi!' > /var/www/html/index.nginx-debian.html
