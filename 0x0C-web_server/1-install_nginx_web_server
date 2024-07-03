@@ -11,4 +11,4 @@ sudo apt-get install -y nginx
 echo "Hello World!" > /var/www/html/index.enginx-debian.html
 
 # Ensure nginx is not usinf systemd for restarting (using service cmd instead)
-service nginx start
+sudo service nginx start
