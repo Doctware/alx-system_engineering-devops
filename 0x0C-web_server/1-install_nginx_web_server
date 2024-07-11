@@ -8,7 +8,7 @@ sudo apt-get -y update
 sudo apt-get -y install nginx
 
 # costom html file with hello wworld
-echo 'Hello Worldi!' > /var/www/html/index.nginx-debian.html
+echo 'Hello Worldi!' | sudo tee /var/www/html/index.nginx-debian.html
 
 # Ensure nginx is not usinf systemd for restarting (using service cmd instead)
 sudo service nginx start
