@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # installing and making nginx liten to port 80 for all site
 sudo apt install -y nginx
 rm /etc/nginx/sites-enabled/default
