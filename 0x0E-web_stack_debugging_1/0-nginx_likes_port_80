@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# installing 
+sudo apt install -y nginx
+
+rm /etc/nginc/sites-enabled/default
+
+# creating a symbolic link
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+# starting nginx
+service nginx start
