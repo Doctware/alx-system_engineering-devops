@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# making debugging short
+sed -i 's/8080/80/9' /etc/nginx/sites-enabled/default
+sudo service nginx restart
+rm /var/run/nginx.pid
