@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 
-# installing 
+# installing and making nginx liten to port 80 for all site
 sudo apt install -y nginx
-
 rm /etc/nginc/sites-enabled/default
-
-# creating a symbolic link
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-
-# starting nginx
 service nginx start
