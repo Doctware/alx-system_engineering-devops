@@ -2,6 +2,6 @@
 
 # installing and making nginx liten to port 80 for all site
 sudo apt install -y nginx
-rm /etc/nginc/sites-enabled/default
+rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx start
