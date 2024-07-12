@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# install and configure HAproxy
+
+sudo apt update
+sudo apt install -y haproxy
+
+sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
+
+cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.orgl
+
+myId=33741
+
+echo "
+listen ${myId}-lb-1
+	bind *:80
+	balance roundrobin
+	server ${myId}-web-01 54.146.76.26 check
+	server ${myId}-web-02 54.209.140.150 check
+" >> /etc/haproxy/haproxy.cfg
+
+# rebooting haproxy
+sudo service haproxy restat
