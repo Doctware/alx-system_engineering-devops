@@ -1,22 +1,37 @@
 #!/usr/bin/env bash
-# install and configure HAproxy
+# Install and configure HAProxy
 
+# Exit script on any error
+set -e
+
+# Variables
+myId=33741
+WEB01_IP="54.146.76.26"
+WEB02_IP="54.209.140.150"
+
+# Update package list and install HAProxy
 sudo apt update
 sudo apt install -y haproxy
 
-sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
+# Enable HAProxy to start on boot
+sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
 
-cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.orgl
+# Backup the original configuration file
+sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.orgl
 
-myId=33741
-
-echo "
+# Append new listen configuration to HAProxy config
+sudo bash -c "cat >> /etc/haproxy/haproxy.cfg <<EOF
 listen ${myId}-lb-1
-	bind *:80
-	balance roundrobin
-	server ${myId}-web-01 54.146.76.26 check
-	server ${myId}-web-02 54.209.140.150 check
-" >> /etc/haproxy/haproxy.cfg
+    bind *:80
+    balance roundrobin
+    server ${myId}-web-01 ${WEB01_IP} check
+    server ${myId}-web-02 ${WEB02_IP} check
+EOF"
 
-# rebooting haproxy
-sudo service haproxy restat
+# Restart HAProxy to apply changes
+sudo service haproxy restart
+
+# Check HAProxy status
+sudo service haproxy status
+
+echo "HAProxy has been installed and configured successfully."
