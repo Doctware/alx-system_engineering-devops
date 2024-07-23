@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# this script run whoami coommand then accept args and give output
+if [ -z "$1" ]; then
+	echo "Usage: $0 [USER_name]"
+	exit 1
+fi
+
+USER="$1"
+sudo -u  "$USER"  "whoami"
