@@ -3,10 +3,8 @@
 
 MYSQL_ROOT_PASSWD=$1
 
-mysql -u root "$MYSQL_ROOT_PASSWD" --all-databases > backup.sql
+mysqldump -u root "$MYSQL_ROOT_PASSWD" --all-databases > backup.sql
 
-CURRENT_DATE=$(date +"d%-%m-%Y")
+CURRENT_DATE=$(date +"%d-%m-%Y")
 
 tar -czvf "$CURRENT_DATE.tar.gz" backup.sql
-
-rm backup.sql
