@@ -2,9 +2,9 @@
 """This module contains a function that requests
    REST API for a given employee ID then
    returns information about his/her todo list and exports it to a CSV file."""
+import csv
 import requests
 import sys
-import csv
 
 
 def get_employee_todolist(employee_id):
