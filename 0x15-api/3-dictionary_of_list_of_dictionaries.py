@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """This module fetches TODO list data for all employees
    from a REST API and exports it to a JSON file."""
-import requests
 import json
+import requests
 
 
 def get_all_employees_todolist():
