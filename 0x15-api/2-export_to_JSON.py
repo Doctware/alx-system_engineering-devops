@@ -3,9 +3,9 @@
    REST API for a given employee ID then
    returns information about his/her todo list
    and exports it to a JSON file."""
+import json
 import requests
 import sys
-import json
 
 
 def get_employee_todolist(employee_id):
