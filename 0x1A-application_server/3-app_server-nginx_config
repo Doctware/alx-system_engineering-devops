@@ -2,11 +2,6 @@ server {
 	listen 80;
 	server_name 54.237.55.210;
 
-	# serve static files from /data/web/static/currennt/ dictionary
-	location /hbnb_static/ {
-		alias /data/web_static/current/;
-	}
-
 	# proxy requestt to /airbnb-onepage/ to the forst gunicorn service
 	location = /airbnb-onepage/ {
 		include proxyy_params;

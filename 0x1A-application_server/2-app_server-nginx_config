@@ -1,7 +1,7 @@
 # serving content in both local and public
 server {
         listen 80;
-        server_name 54.237.55.210 www.doctwaretech.tech;
+        server_name 54.237.55.210;
 
         location /airbnb-onepage/ {
 		include proxy_params;
